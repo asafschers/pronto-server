@@ -21,8 +21,7 @@
         :dir (env :repository-path)
         :env {"GITHUB_ACCESS_TOKEN" (env :github-access-token)
               "PULL_REQUEST_ID" pr-number})
-    (let [response (handler request)]
-      response))))
+    response)))
 
 (def app
   (-> {:status 200}
